@@ -2,18 +2,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BankApi.DTOs.Auth;
 
-public class RegisterDto 
+public class LoginDto
 {
-    [Required]
-    [MinLength(3)]
-    [MaxLength(100)]
-    public string FullName { get; set; } = string.Empty;
-
     [Required]
     [EmailAddress]
     public string Email { get; set; } = string.Empty;
 
     [Required]
-    [MinLength(6)]
     public string Password { get; set; } = string.Empty;
 }

@@ -18,8 +18,8 @@ public class CustomerConfiguration : IEntityTypeConfiguration<Customer>
                 .IsRequired()
                 .HasMaxLength(150);
 
-            buidlder.HasIndex(c => c.Email)
-                .IsUnique()
+            builder.HasIndex(c => c.Email)
+                .IsUnique();
         
             builder.Property(c => c.PhoneNumber)
                 .IsRequired()

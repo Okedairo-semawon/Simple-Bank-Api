@@ -11,11 +11,11 @@ public class LedgerEntryConfiguration : IEntityTypeConfiguration<LedgerEntry>
         builder.HasKey(l => l.Id);
 
         builder.Property(l => l.Amount)
-            .HasPrecision(18, 2);
+            .HasPrecision(18, 2)
             .IsRequired();
 
         builder.Property(l => l.Type)
-            .HasConversion<string>();
+            .HasConversion<string>()
             .IsRequired();
 
         builder.Property(l => l.Description)
